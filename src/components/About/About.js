@@ -1,50 +1,57 @@
 import React, {Fragment} from 'react';
 import PieChart from './PieChart';
+import { v4 as uuidv4 } from 'uuid';
 
-const About = () => {
+const About = (props) => {
     
     const skillsProgramming = [
-    {name: 'C#', type: 'Programming Language'},
-    {name: 'JavaScript', type: 'Programming Language'},
-    {name: 'HTML', type: 'Programming Language'},
-    {name: 'CSS', type: 'Programming Language'},
-    {name: 'Visual Basic', type: 'Programming Language'}];
+    {id: uuidv4() ,name: 'C#', type: 'Programming Language'},
+    {id: uuidv4() ,name: 'JavaScript', type: 'Programming Language'},
+    {id: uuidv4() ,name: 'HTML', type: 'Programming Language'},
+    {id: uuidv4() ,name: 'CSS', type: 'Programming Language'},
+    {id: uuidv4() ,name: 'Visual Basic', type: 'Programming Language'}];
     
-    const skillsFramework = [{name: 'ASP.NET MVC', type: 'Framework'},
-    {name: 'ASP.NET', type: 'Framework'},
-    {name: 'ASP.NET Core', type: 'Framework'},
-    {name: 'Entity Framework', type: 'Framework'}];
+    const skillsFramework = [
+    {id: uuidv4() ,name: 'ASP.NET MVC', type: 'Framework'},
+    {id: uuidv4() ,name: 'ASP.NET', type: 'Framework'},
+    {id: uuidv4() ,name: 'ASP.NET Core', type: 'Framework'},
+    {id: uuidv4() ,name: 'Entity Framework', type: 'Framework'}];
     
-    const skillsLibrary = [{name: 'React', type: 'Library'},
-    {name: 'Redux', type: 'Library'},
-    {name: 'Bootstrap', type: 'Library'},
-    {name: 'Axios.js', type: 'Library'},
-    {name: 'Chart.js', type: 'Library'},
-    {name: 'Autocomplete.js', type: 'Library'}];
+    const skillsLibrary = [
+    {id: uuidv4() ,name: 'React', type: 'Library'},
+    {id: uuidv4() ,name: 'Redux', type: 'Library'},
+    {id: uuidv4() ,name: 'Bootstrap', type: 'Library'},
+    {id: uuidv4() ,name: 'Axios.js', type: 'Library'},
+    {id: uuidv4() ,name: 'Chart.js', type: 'Library'},
+    {id: uuidv4() ,name: 'Autocomplete.js', type: 'Library'}];
 
-    const skillsCloudComputing = [{name: 'Amazon', type: 'Cloud Computing'},
-    {name: 'Azure', type: 'Cloud Computing'}];
+    const skillsCloudComputing = [
+    {id: uuidv4() ,name: 'Amazon', type: 'Cloud Computing'},
+    {id: uuidv4() ,name: 'Azure', type: 'Cloud Computing'}];
 
-    const skillsDatabase = [{name: 'SQL', type: 'Database'},
-    {name: 'MySQL', type: 'Database'},
-    {name: 'SAP HANA', type: 'Database'},
-    {name: 'MongoDB', type: 'Database'}];
+    const skillsDatabase = [
+    {id: uuidv4() ,name: 'SQL', type: 'Database'},
+    {id: uuidv4() ,name: 'MySQL', type: 'Database'},
+    {id: uuidv4() ,name: 'SAP HANA', type: 'Database'},
+    {id: uuidv4() ,name: 'MongoDB', type: 'Database'}];
     
-    const skillsApplication = [{name: 'Visual Studio', type: 'Application'},
-    {name: 'Visual Studio Code', type: 'Application'},
-    {name: 'GitHub', type: 'Application'},
-    {name: 'Postman', type: 'Application'},
-    {name: 'Power BI', type: 'Application'}];
+    const skillsApplication = [
+    {id: uuidv4() , name: 'Visual Studio', type: 'Application'},
+    {id: uuidv4() ,name: 'Visual Studio Code', type: 'Application'},
+    {id: uuidv4() ,name: 'GitHub', type: 'Application'},
+    {id: uuidv4() ,name: 'Postman', type: 'Application'},
+    {id: uuidv4() ,name: 'Power BI', type: 'Application'}];
 
-    const skillsOthers = [{name: 'Object Oriented Programming', type: 'Others'},
-    {name: 'N-tier Architecture', type: 'Others'},
-    {name: 'Clean Architecture', type: 'Others'},
-    {name: 'Kanban', type: 'Others'},
-    {name: 'Agile', type: 'Others'}];
+    const skillsOthers = [
+    {id: uuidv4() ,name: 'Object Oriented Programming', type: 'Others'},
+    {id: uuidv4() ,name: 'N-tier Architecture', type: 'Others'},
+    {id: uuidv4() ,name: 'Clean Architecture', type: 'Others'},
+    {id: uuidv4() ,name: 'Kanban', type: 'Others'},
+    {id: uuidv4() ,name: 'Agile', type: 'Others'}];
 
     return (
         <Fragment>
-            <section className='m-0 px-0 py-5 bg-secondary-subtle' id='scrollSpyAbout'>
+            <section className='m-0 px-0 py-5 bg-secondary-subtle' id='scrollSpyAbout' onPointerEnter={() => props.setScrollPointer(1)}>
                 <div className='container px-5'>
                     <p className='display-5 py-2'>About Me</p>
                     <div className='row m-0 p-0'>
@@ -59,37 +66,37 @@ const About = () => {
                                 <ul>
                                     <li className='list-item mb-0'>Programming Languages</li>
                                     {skillsProgramming.map(data => 
-                                        <span class="badge text-bg-success mx-1">{data.name}</span>
+                                        <span key={data.id} className='badge text-bg-success mx-1'>{data.name}</span>
                                     )}
 
                                     <li className='list-item mb-0'>Frameworks</li>
                                     {skillsFramework.map(data => 
-                                        <span class="badge text-bg-danger mx-1">{data.name}</span>
+                                        <span key={data.id} className='badge text-bg-danger mx-1'>{data.name}</span>
                                     )}
 
                                     <li className='list-item mb-0'>Library</li>
                                     {skillsLibrary.map(data => 
-                                        <span class="badge text-bg-info mx-1">{data.name}</span>
+                                        <span key={data.id} className='badge text-bg-info mx-1'>{data.name}</span>
                                     )}
 
                                     <li className='list-item mb-0'>Cloud Computing</li>
                                     {skillsCloudComputing.map(data => 
-                                        <span class="badge text-bg-primary mx-1">{data.name}</span>
+                                        <span key={data.id} className='badge text-bg-primary mx-1'>{data.name}</span>
                                     )}
 
                                     <li className='list-item mb-0'>Databases</li>
                                     {skillsDatabase.map(data => 
-                                        <span class="badge text-bg-dark mx-1">{data.name}</span>
+                                        <span key={data.id} className='badge text-bg-dark mx-1'>{data.name}</span>
                                     )}
 
                                     <li className='list-item mb-0'>Applications</li>
                                     {skillsApplication.map(data => 
-                                        <span class="badge text-bg-warning mx-1">{data.name}</span>
+                                        <span key={data.id} className='badge text-bg-warning mx-1'>{data.name}</span>
                                     )}
 
                                     <li className='list-item mb-0'>Others</li>
                                     {skillsOthers.map(data => 
-                                        <span class="badge text-bg-secondary mx-1">{data.name}</span>
+                                        <span key={data.id} className='badge text-bg-secondary mx-1'>{data.name}</span>
                                     )}
                                 </ul>
                             </div>

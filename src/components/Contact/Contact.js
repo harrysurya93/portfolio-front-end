@@ -1,6 +1,6 @@
-import React, { Fragment, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
-const Contact = () =>{
+const Contact = (props) =>{
 
     const initialState = {
         email: '',
@@ -59,8 +59,7 @@ const Contact = () =>{
     }
 
     return (
-        <Fragment>
-            <section className='py-5 px-3 bg-secondary-subtle' id='scrollSpyContact' style={{minHeight:`75vh`}}>
+            <section className='py-5 px-3 bg-secondary-subtle' id='scrollSpyContact' style={{minHeight:`75vh`}} onPointerEnter={() => props.setScrollPointer(5)}>
             <p className='display-5 py-2 m-0 mb-3 text-center'>Contact Me</p>
                 <form autoComplete='off' onSubmit={handleSubmit}>
                     <div className='form-floating w-75 mx-auto mb-3'>
@@ -73,7 +72,7 @@ const Contact = () =>{
                     </div>
                     
                     <div className='form-floating w-75 mx-auto mb-3'>
-                        {firstInput ? <textarea className='form-control' style={{height:100}} placeholder='Leave a comment here' id='floatingTextarea' onChange={handleInputChange} name='comments' value={newForm.comments} /> : <textarea className={`form-control ${isCorrectComments ? 'is-valid' : 'is-invalid'}`} placeholder='Leave a comment here' id='floatingTextarea' onChange={handleInputChange} name='comments' value={newForm.comments} /> }
+                        {firstInput ? <textarea className='form-control' style={{height:150}} placeholder='Leave a comment here' id='floatingTextarea' onChange={handleInputChange} name='comments' value={newForm.comments} /> : <textarea style={{height:150}} className={`form-control ${isCorrectComments ? 'is-valid' : 'is-invalid'}`} placeholder='Leave a comment here' id='floatingTextarea' onChange={handleInputChange} name='comments' value={newForm.comments} /> }
                         <label htmlFor='floatingTextarea'>Comments (≥ 20 characters)</label>
                         {!firstInput &&
                         <div className={`${isCorrectComments ? 'valid-feedback' : 'invalid-feedback'}`}>
@@ -89,15 +88,8 @@ const Contact = () =>{
                         }
                             </div>
                                 
-
-
-                    <div className='text-center'>
-                        
-                        
-                    </div>
                 </form>
             </section>
-        </Fragment>
     )
 }
 

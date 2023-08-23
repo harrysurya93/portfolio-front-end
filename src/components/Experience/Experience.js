@@ -1,26 +1,21 @@
 import React, { Fragment, useState } from 'react';
 
-const Experience = () => {
-
-    const [isColumn, setIsColumn] = useState(true);
-    const styleLayoutColumn = {
-      flexDirection: isColumn ? 'column' : 'row',
-    };
+const Experience = (props) => {
 
     return (
         <Fragment>
-            <section className='px-4 py-5 bg-white' id='scrollSpyExperience' >
+            <section className='px-4 py-5 bg-white' onPointerEnter={() => props.setScrollPointer(2)}  id='scrollSpyExperience' >
                 <div className='container mx-auto'>
                     <p className='display-5 py-2 mx-0 mb-3'>Work Experience</p>
-                    <div class="accordion " id="accordionPanelsStayOpenExample">
-                        <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
-                                            <p className='mb-0'><i class="bi bi-buildings-fill"></i> <a className='link-primary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover' href='https://polychemie.co.id'>Polychemie Asia Pacific Permai</a> - <span className='text-muted fst-italic'>Head of IT Development</span><br/> Aug 2019 - May 2023</p>
+                    <div className='accordion ' id='accordionPanelsStayOpenExample'>
+                        <div className='accordion-item'>
+                            <h2 className='accordion-header'>
+                                <button className='accordion-button' type='button' data-bs-toggle='collapse' data-bs-target='#panelsStayOpen-collapseOne' aria-expanded='true' aria-controls='panelsStayOpen-collapseOne'>
+                                            <p className='mb-0'><i className='bi bi-buildings-fill'></i> <a className='link-primary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover' href='https://polychemie.co.id'>Polychemie Asia Pacific Permai</a> - <span className='text-muted fst-italic'>Head of IT Development</span><br/> Aug 2019 - May 2023</p>
                                 </button>
                             </h2>
-                            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
-                            <div class="accordion-body">
+                            <div id='panelsStayOpen-collapseOne' className='accordion-collapse collapse show'>
+                            <div className='accordion-body'>
                                 <ul>
                                     <li className='lead'>Leading and mentoring a team of 3 web developers to build and maintain the web server and web applications, coordinating project priorities, and providing mentorship to drive team objectives.</li>
                                     <li className='lead'>Maintaining the Cloud Server cost efficiency by taking necessary action to remove redundancy in the project.</li>
@@ -32,14 +27,14 @@ const Experience = () => {
                             </div>
                             </div>
                         </div>
-                        <div class="accordion-item">
-                            <h2 class="accordion-header">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
-                                <p className='mb-0'><i class="bi bi-buildings-fill"></i> <a className='link-primary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover' href='https://soltius.co.id'>Soltius Indonesia</a> - <span className='text-muted fst-italic'>Technical Consultant</span><br/> Aug 2018 - Jul 2019</p>
+                        <div className='accordion-item'>
+                            <h2 className='accordion-header'>
+                            <button className='accordion-button' type='button' data-bs-toggle='collapse' data-bs-target='#panelsStayOpen-collapseTwo' aria-expanded='false' aria-controls='panelsStayOpen-collapseTwo'>
+                                <p className='mb-0'><i className='bi bi-buildings-fill'></i> <a className='link-primary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover' href='https://soltius.co.id'>Soltius Indonesia</a> - <span className='text-muted fst-italic'>Technical Consultant</span><br/> Aug 2018 - Jul 2019</p>
                             </button>
                             </h2>
-                            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse show">
-                            <div class="accordion-body">
+                            <div id='panelsStayOpen-collapseTwo' className='accordion-collapse collapse show'>
+                            <div className='accordion-body'>
                             <ul>
                                     <li className='lead'>Providing technical support to the existing product by troubleshooting and bug fixing based on the client’s requirement.</li>
                                     <li className='lead'>Collaborating with team members to implement website solutions that integrated with the ERP.</li>

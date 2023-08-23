@@ -3,18 +3,16 @@ import ProfilePicture2 from '../../assets/images/images.jpeg';
 import ProfilePicture3 from '../../assets/images/images2.png';
 import '../Introduction/Introduction.css';
 
-const Introduction = () =>{
+const Introduction = (props) =>{
 
     const [imageFocus, setImageFocus] = useState(false);
     const imageReference = useRef();
     const handleImageTransition = () =>{
         if(imageFocus) {
             imageReference.current.src = ProfilePicture3;
-            console.log(imageFocus);
         }
         else{
             imageReference.current.src = ProfilePicture2;
-            console.log(imageFocus);
         }
     }
 
@@ -24,7 +22,7 @@ const Introduction = () =>{
 
     return (
         <Fragment>            
-            <section className='row m-0 p-0 align-items-center' id='IntroductionSection'>
+            <section className='row m-0 p-0 align-items-center' id='IntroductionSection' onPointerEnter={() => props.setScrollPointer(0)}>
                 <div className='col-xl-1 col-lg-1 col-md-0 col-sm-0 d-none d-xs-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block ps-4 m-0'>
                     <h2><a className='text-white' href='https://www.linkedin.com/in/harry-surya/' target='_blank'><i className='bi bi-linkedin'></i></a></h2>
                     <h2><a className='text-white' href='https://github.com/harrysurya93' target='_blank'><i className='bi bi-github'></i></a></h2>
@@ -36,7 +34,7 @@ const Introduction = () =>{
                     <h1 className='font-monospace display-3  text-light'>Harry Surya</h1>
                     <h3 className='font-monospace fw-bold text-light'>Full-Stack Developer</h3>
                     <p className='font-monospace display-8 fst-italic nowrap mb-0  text-light'>Experienced for 5 years creating and designing website for several companies.</p>
-                    <p className='font-monospace display-8 fst-italic mb-0  text-light'><i class="bi bi-geo-alt-fill"></i> Based in <a className='link-primary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover' target='_blank' href='https://goo.gl/maps/RqFsQb1WF2reuUhk9'>Vancouver, BC, Canada.</a></p> 
+                    <p className='font-monospace display-8 fst-italic mb-0  text-light'><i className='bi bi-geo-alt-fill'></i> Based in <a className='link-primary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover' target='_blank' href='https://goo.gl/maps/RqFsQb1WF2reuUhk9'>Vancouver, BC, Canada.</a></p> 
                     <p className='font-monospace fw-bold mt-5 typing-animation-end mb-0  text-light'>/* Welcome to my portfolio website.</p>
                 </div>
                 <div className='col-xl-4 col-lg-4 col-md-12 col-sm-12 text-center'>                    

@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useEffect, useState } from 'react';
 import Introduction from '../components/Introduction/Introduction';
 import NavBar from '../components/NavBar/NavBar';
 import About from '../components/About/About';
@@ -12,26 +12,19 @@ import RightSlideAnimation from './RightSlideAnimation';
 import Credit from '../components/Credit/Credit';
 
 const MainBody = () =>{
+
+    const [scrollPointer, setScrollPointer] = useState(0);
+
     return (
         <Fragment>
-            <NavBar />            
-                <main>                        
-                    <Introduction />
-
-                    <RightSlideAnimation>
-                        <About />
-                    </RightSlideAnimation>
-                        <Experience />
-                    <LeftSlideAnimation>
-                        <Education />
-                    </LeftSlideAnimation>
-
-                            
-                        
-                        <Work/>
-                    <RightSlideAnimation>
-                    <Contact />
-                    </RightSlideAnimation>
+            <NavBar scrollPointer={scrollPointer} />            
+                <main>                  
+                    <Introduction setScrollPointer={setScrollPointer} />
+                    <About setScrollPointer={setScrollPointer} />
+                    <Experience setScrollPointer={setScrollPointer} />
+                    <Education setScrollPointer={setScrollPointer} />                        
+                    <Work setScrollPointer={setScrollPointer} />
+                    <Contact setScrollPointer={setScrollPointer} />
                 </main>
             <Credit />
         </Fragment>
