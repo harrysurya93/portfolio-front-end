@@ -1,0 +1,36 @@
+@keyframes typing {
+    from {
+      width: 0
+    }
+  }
+      
+  @keyframes blink {
+    50% {
+      border-color: transparent
+    }
+  }
+
+.typing-animation {
+    width: 50ch;
+    animation: typing 1s steps(22);
+    overflow: hidden;
+    white-space: nowrap;
+    font-family: monospace;
+}
+
+.typing-animation-end {
+    width: 36ch;
+    animation: typing 1s steps(22), blink .5s step-end infinite alternate;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid;
+    font-family: monospace;
+}
+
+#IntroductionSection
+{
+  background-color: #4d4855;
+  background-image: linear-gradient(170deg,#000000 30%,  #4d4855 90%);
+  min-height: 100vh;
+}
+
