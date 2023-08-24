@@ -43,11 +43,11 @@ const About = (props) => {
     {id: uuidv4() ,name: 'Power BI', type: 'Application'}];
 
     const skillsOthers = [
-    {id: uuidv4() ,name: 'Object Oriented Programming', type: 'Others'},
-    {id: uuidv4() ,name: 'N-tier Architecture', type: 'Others'},
-    {id: uuidv4() ,name: 'Clean Architecture', type: 'Others'},
-    {id: uuidv4() ,name: 'Kanban', type: 'Others'},
-    {id: uuidv4() ,name: 'Agile', type: 'Others'}];
+    {id: uuidv4() ,name: 'Object Oriented Programming', type: 'Other'},
+    {id: uuidv4() ,name: 'N-tier Architecture', type: 'Other'},
+    {id: uuidv4() ,name: 'Clean Architecture', type: 'Other'},
+    {id: uuidv4() ,name: 'Kanban', type: 'Other'},
+    {id: uuidv4() ,name: 'Agile', type: 'Other'}];
 
     return (
         <Fragment>
