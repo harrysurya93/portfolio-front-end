@@ -4,7 +4,7 @@ const Credit = () => {
     return (
         <footer className='m-0 py-3' style={{minHeight:'25vh', backgroundColor:'#000000'}}>
             <div className='container'>
-                <p className='text-white text-center px-5'>Developed and designed by Harry Surya using React and Bootstrap, Database are delivered through RestAPI using .NET Core and Entity Framework, and finally deployed using AWS Cloud Services such as AWS Amplify and AWS Route 53.</p>
+                <p className='text-white text-center px-5'>Developed and designed by Harry Surya using <mark>React</mark>, <mark>Bootstrap</mark>, and <mark>AWS Amplify</mark>.</p>
                 <h3 className='text-center'>
                     <a className='text-white mx-1' href='https://www.linkedin.com/in/harry-surya/' target='_blank'><i className='bi bi-linkedin'></i></a>
                     <a className='text-white mx-1' href='https://github.com/harrysurya93' target='_blank'><i className='bi bi-github'></i></a>
