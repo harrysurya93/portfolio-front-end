@@ -51,7 +51,7 @@ const About = (props) => {
 
     return (
         <Fragment>
-            <section className='m-0 px-0 py-5 bg-secondary-subtle' id='scrollSpyAbout'>
+            <section className='m-0 px-0 py-5 bg-secondary-subtle' id='scrollSpyAbout'> 
                 <div className='container px-5'>
                     <p className='display-5 py-2'>About Me</p>
                     <div className='row m-0 p-0'>
