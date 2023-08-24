@@ -16,7 +16,7 @@ const Work = (props) => {
 
     return (
         <Fragment>
-            <section className='px-4 py-5 bg-white' id='scrollSpyWork' style={{minHeight:`50vh`}} onPointerEnter={() => props.setScrollPointer(4)}>
+            <section className='px-4 py-5 bg-white' id='scrollSpyWork' style={{minHeight:`50vh`}}>
             <div className='container'>
                 <p className='display-5 my-2 mx-0'>Previous Work</p>
                 <div className='row m-0'>

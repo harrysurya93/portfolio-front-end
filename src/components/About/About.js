@@ -51,16 +51,16 @@ const About = (props) => {
 
     return (
         <Fragment>
-            <section className='m-0 px-0 py-5 bg-secondary-subtle' id='scrollSpyAbout' onPointerEnter={() => props.setScrollPointer(1)}>
+            <section className='m-0 px-0 py-5 bg-secondary-subtle' id='scrollSpyAbout'>
                 <div className='container px-5'>
                     <p className='display-5 py-2'>About Me</p>
                     <div className='row m-0 p-0'>
                         <div className='col-xl-7 col-lg-6 col-md-12 col-sm-12 p-0'>
                             <p className='lead'>
-                                Passionate Full Stack Developer with five years of experience creating front-end and back-end websites to enhance companies' workflow and business decisions. Succeeded in implementing web solutions in several projects ranging from small to middle-sized companies, varying from manufacturer and retail.                         
+                                Passionate Full Stack Developer with <mark>five years of experience creating front-end and back-end websites</mark> to enhance companies' workflow and business decisions. Succeeded in implementing web solutions in several projects ranging from small to middle-sized companies, varying from manufacturer and retail.                         
                             </p>
                             <p className='lead'>
-                                Proven hands-on experience in gathering requirements, designing concepts, developing testable code, and delivering websites that hundreds of users use. Deep understanding of concepts of Enterprise Resource Planning (ERP), Customer Relationship Management (CRM), and Warehouse Management Systems (WMS). Skilled in providing technical mentorship to improve code quality, reliability, and security.
+                                <mark>Proven hands-on experience in gathering requirements, designing concepts, developing testable code, and delivering websites that hundreds of users use</mark>. Deep understanding of concepts of Enterprise Resource Planning (ERP), Customer Relationship Management (CRM), and Warehouse Management Systems (WMS). Skilled in providing technical mentorship to improve code quality, reliability, and security.
                             </p>
                                 
                                 <ul>

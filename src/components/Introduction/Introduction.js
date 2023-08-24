@@ -22,12 +22,13 @@ const Introduction = (props) =>{
 
     return (
         <Fragment>            
-            <section className='row m-0 p-0 align-items-center' id='IntroductionSection' onPointerEnter={() => props.setScrollPointer(0)}>
+            <section className='row m-0 p-0 align-items-center' id='scrollSpyIntroduction'>
                 <div className='col-xl-1 col-lg-1 col-md-0 col-sm-0 d-none d-xs-none d-sm-none d-md-none d-lg-block d-xl-block d-xxl-block ps-4 m-0'>
                     <h2><a className='text-white' href='https://www.linkedin.com/in/harry-surya/' target='_blank'><i className='bi bi-linkedin'></i></a></h2>
                     <h2><a className='text-white' href='https://github.com/harrysurya93' target='_blank'><i className='bi bi-github'></i></a></h2>
                     <h2><a className='text-white' href='https://www.instagram.com/harrysurya93/' target='_blank'><i className='bi bi-instagram'></i></a></h2>
                     <h2><a className='text-white' href='https://www.facebook.com/profile.php?id=100092739357301' target='_blank'><i className='bi bi-facebook'></i></a></h2>
+                    <h2><a className='text-white' href='mailto:harrysurya93@gmail.com' target='_blank'><i class="bi bi-envelope-at-fill"></i></a></h2>
                 </div>
                 <div className='col-xl-7 col-lg-7 col-md-12 col-sm-12 align px-5 m-0' style={{}}>
                     <h5 className='font-monospace display-8 text-light fw-lighter'>Hello World, my name is</h5>

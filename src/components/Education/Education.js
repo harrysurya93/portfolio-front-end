@@ -3,7 +3,7 @@ import React, { Fragment } from 'react';
 const Education = (props) => {
     return (
         <Fragment>
-            <section className='px-4 py-5 bg-secondary-subtle' id='scrollSpyEducation' style={{minHeight:`25vh`}} onPointerEnter={() => props.setScrollPointer(3)}>
+            <section className='px-4 py-5 bg-secondary-subtle' id='scrollSpyEducation' style={{minHeight:`25vh`}} >
                 <div className='container mx-auto'>
 
             <p className='display-5 py-2 mx-0 mb-3'>Education</p>
