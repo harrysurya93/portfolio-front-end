@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const Contact = (props) =>{
 
@@ -59,10 +59,10 @@ const Contact = (props) =>{
     }
 
     return (
-            <section className='py-5 px-3 bg-light' id='scrollSpyContact' style={{minHeight:`75vh`}}>
-            <p className='display-5 py-2 m-0 mb-3 text-center'>Contact Me</p>
+            <section className='bg-light py-5' id='scrollSpyContact' onMouseEnter={() => props.handlePointerEvent(6)}>
+            <p className='display-5 text-center'>Contact Me</p>
                 <form autoComplete='off' onSubmit={handleSubmit}>
-                    <div className='form-floating w-75 mx-auto mb-3'>
+                    <div className='form-floating mx-4 mb-3 w-75 mx-auto'>
                         {firstInput ? <input className='form-control' id='floatingInput' value={newForm.email} placeholder='name@example.com' onChange={handleInputChange} name='email' /> : <input type='email' className={`form-control ${isCorrectEmail ? 'is-valid' : 'is-invalid'}`} id='floatingInput' value={newForm.email} name='email' onChange={handleInputChange} placeholder='name@example.com' /> }
                         <label htmlFor='floatingInput'>Email address (required)</label>
                         {!firstInput &&
@@ -71,9 +71,9 @@ const Contact = (props) =>{
                         </div>}                    
                     </div>
                     
-                    <div className='form-floating w-75 mx-auto mb-3'>
+                    <div className='form-floating mx-4 mb-3 w-75 mx-auto'>
                         {firstInput ? <textarea className='form-control' style={{height:150}} placeholder='Leave a comment here' id='floatingTextarea' onChange={handleInputChange} name='comments' value={newForm.comments} /> : <textarea style={{height:150}} className={`form-control ${isCorrectComments ? 'is-valid' : 'is-invalid'}`} placeholder='Leave a comment here' id='floatingTextarea' onChange={handleInputChange} name='comments' value={newForm.comments} /> }
-                        <label htmlFor='floatingTextarea'>Comments (≥ 20 characters)</label>
+                        <label htmlFor='floatingTextarea'>Comments</label>
                         {!firstInput &&
                         <div className={`${isCorrectComments ? 'valid-feedback' : 'invalid-feedback'}`}>
                         {isCorrectComments ? 'Looks good!' : 'Please input at least 20 characters.'}

@@ -1,36 +1,37 @@
 import React from 'react';
-import GOLiveDinasira from '../../assets/images/GOLiveDinasira.jpeg';
-import WorkshopSoltius from '../../assets/images/WorkshopSoltius.jpeg';
-import GOLivePolychemie from '../../assets/images/GOLivePolychemie.jpeg';
+import GOLiveDinasira from '../../assets/images/GOLiveDinasira.jpg';
+import WorkshopSoltius from '../../assets/images/WorkshopSoltius.jpg';
+import GOLivePolychemie from '../../assets/images/GOLivePolychemie.jpg';
 
-const Gallery = () => {
+const Gallery = (props) => {
+
     return(
-        <section className='bg-secondary-subtle m-0 px-0 py-5 ' id='scrollSpyGallery' style={{minHeight:'75vh'}}>
-            <div className='container px-5'>
-            <p className='display-5 py-2'>Gallery</p>
-            <div class="card-group">
-                <div class="card">
-                    <img src={GOLivePolychemie} class="card-img-top" alt="Project Completion Ceremony Polychemie Asia Pacific Permai" />
-                    <div class="card-body">
-                    <h5 class="card-title">Completion Ceremony</h5>
-                    <p class="card-text">Project consist of 4 team members that implemented ERP solution, several addons, and reporting.</p>
-                    <p class="card-text"><small class="text-body-secondary"><i class="bi bi-calendar-check"></i> Dec 2018 - May 2019</small></p>
+        <section className='bg-secondary-subtle py-5' id='scrollSpyGallery' onMouseEnter={() => props.handlePointerEvent(5)}>
+            <div className='container'>
+            <p className='display-5 text-center'>Gallery</p>
+            <div className='row mx-1'>
+                <div className='card col-xl-4 col-lg-4 col-md-12 col-sm-12 p-0'>
+                    <img src={GOLivePolychemie} className='card-img-top' alt='Project Completion Ceremony Polychemie Asia Pacific Permai' />
+                    <div className='card-body'>
+                    <h5 className='card-title'>Completion Ceremony</h5>
+                    <p className='card-text'>Project consist of 4 team members that implemented ERP solution, several addons, and reporting.</p>
+                    <p className='card-text'><small className='text-body-secondary'><i className='bi bi-calendar-check'></i> Dec 2018 - May 2019</small></p>
                     </div>
                 </div>
-                <div class="card">
-                    <img src={WorkshopSoltius} class="card-img-top" alt="Workshop Soltius" />
-                    <div class="card-body">
-                    <h5 class="card-title">Workshop</h5>
-                    <p class="card-text">Presenting MRP module as one of the ERP's functionality to help existing customer plan the supply chain.</p>
-                    <p class="card-text"><small class="text-body-secondary"><i class="bi bi-calendar-check"></i> October 2018</small></p>
+                <div className='card col-xl-4 col-lg-4 col-md-12 col-sm-12 p-0'>
+                    <img src={WorkshopSoltius} className='card-img-top' alt='Workshop Soltius' />
+                    <div className='card-body'>
+                    <h5 className='card-title'>Workshop</h5>
+                    <p className='card-text'>Presenting MRP module as one of the ERP's functionality to help existing customer plan the supply chain.</p>
+                    <p className='card-text'><small className='text-body-secondary'><i className='bi bi-calendar-check'></i> October 2018</small></p>
                     </div>
                 </div>
-                <div class="card">
-                    <img src={GOLiveDinasira} class="card-img-top" alt="Project Completion Ceremony Dinasira Sembada" />
-                    <div class="card-body">
-                    <h5 class="card-title">Completion Ceremony</h5>
-                    <p class="card-text">Project consist of 5 team members that implemented ERP solution, several addons, and reporting.</p>
-                    <p class="card-text"><small class="text-body-secondary"><i class="bi bi-calendar-check"></i> August 2018 - November 2018</small></p>
+                <div className='card col-xl-4 col-lg-4 col-md-12 col-sm-12 p-0'>
+                    <img src={GOLiveDinasira} className='card-img-top' alt='Project Completion Ceremony Dinasira Sembada' />
+                    <div className='card-body'>
+                    <h5 className='card-title'>Completion Ceremony</h5>
+                    <p className='card-text'>Project consist of 5 team members that implemented ERP solution, several addons, and reporting.</p>
+                    <p className='card-text'><small className='text-body-secondary'><i className='bi bi-calendar-check'></i> August 2018 - November 2018</small></p>
                     </div>
                 </div>
                 </div>

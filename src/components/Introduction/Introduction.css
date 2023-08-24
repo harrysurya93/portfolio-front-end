@@ -1,36 +1,24 @@
-@keyframes typing {
-    from {
-      width: 0
-    }
-  }
-      
-  @keyframes blink {
-    50% {
-      border-color: transparent
-    }
-  }
+         
+         .btn-grad {
+            background-image: linear-gradient(to right, #232526 0%, #414345  51%, #232526  100%);
+            margin: 10px;
+            padding: 15px 45px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: white;            
+            box-shadow: 0 0 20px #eee;
+            border-radius: 10px;
+            display: block;
+          }
 
-.typing-animation {
-    width: 50ch;
-    animation: typing 1s steps(22);
-    overflow: hidden;
-    white-space: nowrap;
-    font-family: monospace;
-}
-
-.typing-animation-end {
-    width: 36ch;
-    animation: typing 1s steps(22), blink .5s step-end infinite alternate;
-    overflow: hidden;
-    white-space: nowrap;
-    border-right: 2px solid;
-    font-family: monospace;
-}
-
-#scrollSpyIntroduction
-{
-  background-color: #4d4855;
-  background-image: linear-gradient(170deg,#000000 30%,  #4d4855 90%);
-  min-height: 100vh;
-}
-
+          .btn-grad:hover {
+            background-position: right center; /* change the direction of the change here */
+            color: #fff;
+            text-decoration: none;
+          }
+         
+          #scrollSpyIntroduction {
+            background:radial-gradient(circle at 10% 20%, rgb(69, 86, 102) 0%, rgb(34, 34, 34) 90%)
+          }

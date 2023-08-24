@@ -1,9 +1,9 @@
-import React, {Fragment} from 'react';
+import React from 'react';
 import PieChart from './PieChart';
 import { v4 as uuidv4 } from 'uuid';
 
 const About = (props) => {
-    
+
     const skillsProgramming = [
     {id: uuidv4() ,name: 'C#', type: 'Programming Language'},
     {id: uuidv4() ,name: 'JavaScript', type: 'Programming Language'},
@@ -50,10 +50,9 @@ const About = (props) => {
     {id: uuidv4() ,name: 'Agile', type: 'Other'}];
 
     return (
-        <Fragment>
-            <section className='m-0 px-0 py-5 bg-secondary-subtle' id='scrollSpyAbout'> 
-                <div className='container px-5'>
-                    <p className='display-5 py-2'>About Me</p>
+            <section className='bg-secondary-subtle py-5' id='scrollSpyAbout'  onMouseEnter={() => props.handlePointerEvent(1)}> 
+                <div className='container'>
+                    <p className='display-5 text-start my-3'>About Me</p>
                     <div className='row m-0 p-0'>
                         <div className='col-xl-6 col-lg-6 col-md-12 col-sm-12 p-0'>
                             <p className='lead'>
@@ -107,7 +106,6 @@ const About = (props) => {
 
                     </div>                
             </section>
-        </Fragment>
     )
 }
 
