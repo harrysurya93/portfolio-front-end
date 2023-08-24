@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useRef } from 'react';
+import React, { Fragment } from 'react';
 import Introduction from '../components/Introduction/Introduction';
 import NavBar from '../components/NavBar/NavBar';
 import About from '../components/About/About';
