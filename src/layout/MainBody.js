@@ -16,7 +16,7 @@ const MainBody = () =>{
         <Fragment>                        
             <NavBar />            
                 <main >
-                    <ScrollSpy scrollThrottle={1} >
+                    <ScrollSpy scrollThrottle={100} >
                         <Introduction />
                         <About />
                         <Experience />
