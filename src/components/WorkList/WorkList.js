@@ -16,13 +16,13 @@ const Work = (props) => {
 
     return (
         <Fragment>
-            <section className='px-4 py-5 bg-white' id='scrollSpyWork' style={{minHeight:`50vh`}}>
+            <section className='px-4 py-5 bg-light' id='scrollSpyWork'>
             <div className='container'>
                 <p className='display-5 my-2 mx-0'>Previous Work</p>
-                <div className='row m-0'>
+                <div class="row row-cols-1 row-cols-md-2 g-4">
                     {projects.map(project => 
-                        <div key={project.id} className='col-xl-4 col-lg-4 col-md-6 col-sm-12 p-0 m-0 mx-auto'>
-                            <div className='card rounded-0 border-1 bg-white border-light-subtle' style={{minHeight:300}}>
+                        <div key={project.id} className='col'>
+                            <div className='card bg-white border-light-subtle h-100'>
                                 <div className='card-body'>
                                     <p className='card-title h5 mb-1'><i className='bi bi-window'></i> {project.name}</p>
                                     <p className='card-title text-muted h8 mb-2'><i className='bi bi-buildings-fill'></i> {project.company}</p>

@@ -59,7 +59,7 @@ const Contact = (props) =>{
     }
 
     return (
-            <section className='py-5 px-3 bg-secondary-subtle' id='scrollSpyContact' style={{minHeight:`75vh`}}>
+            <section className='py-5 px-3 bg-light' id='scrollSpyContact' style={{minHeight:`75vh`}}>
             <p className='display-5 py-2 m-0 mb-3 text-center'>Contact Me</p>
                 <form autoComplete='off' onSubmit={handleSubmit}>
                     <div className='form-floating w-75 mx-auto mb-3'>

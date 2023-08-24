@@ -4,7 +4,7 @@ const Experience = (props) => {
 
     return (
         <Fragment>
-            <section className='px-4 py-5 bg-white' id='scrollSpyExperience' >
+            <section className='px-4 py-5 bg-light' id='scrollSpyExperience' >
                 <div className='container mx-auto'>
                     <p className='display-5 py-2 mx-0 mb-3'>Work Experience</p>
                     <div className='accordion ' id='accordionPanelsStayOpenExample'>

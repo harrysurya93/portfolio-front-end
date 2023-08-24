@@ -15,25 +15,28 @@ const NavBar = (props) => {
                     </div>
                     <div className='offcanvas-body' id='navbarContent'>
                         <ul className='nav navbar-nav nav-pills justify-content-end gap-2 flex-grow-1 text-center'>
-                            <li className='nav-item h5 mb-0'>
+                            <li className='nav-item h6 mb-0'>
                                 <a className='nav-link text-white' data-to-scrollspy-id="scrollSpyIntroduction" href='#scrollSpyIntroduction'><i className='bi bi-diamond-fill'></i> Introduction</a>
                             </li>
-                            <li className='nav-item h5 mb-0'>
+                            <li className='nav-item h6 mb-0'>
                                 <a className='nav-link text-white' data-to-scrollspy-id="scrollSpyAbout" href='#scrollSpyAbout'><i className='bi bi-file-person-fill'></i> About</a>
                             </li>
-                            <li className='nav-item h5 mb-0'>
+                            <li className='nav-item h6 mb-0'>
                                 <a className='nav-link text-white' data-to-scrollspy-id="scrollSpyExperience" href='#scrollSpyExperience'><i className='bi bi-briefcase-fill'></i> Experience</a>
                             </li>
-                            <li className='nav-item h5 mb-0'>
+                            <li className='nav-item h6 mb-0'>
                                 <a className='nav-link text-white' data-to-scrollspy-id="scrollSpyEducation" href='#scrollSpyEducation'><i className='bi bi-mortarboard-fill'></i> Education</a>
                             </li>
-                            <li className='nav-item h5 mb-0'>
+                            <li className='nav-item h6 mb-0'>
                                 <a className='nav-link text-white' data-to-scrollspy-id="scrollSpyWork" href='#scrollSpyWork'><i className='bi bi-code-slash'></i> Work</a>
                             </li>
-                            <li className='nav-item h5 mb-0'>
+                            <li className='nav-item h6 mb-0'>
+                                <a className='nav-link text-white' data-to-scrollspy-id="scrollSpyGallery" href='#scrollSpyGallery'><i class="bi bi-images"></i> Gallery</a>
+                            </li>
+                            <li className='nav-item h6 mb-0'>
                                 <a className='nav-link text-white' data-to-scrollspy-id="scrollSpyContact" href='#scrollSpyContact'><i className='bi bi-envelope'></i> Contact</a>
                             </li>
-                            <li className='nav-item h5 mb-0'>
+                            <li className='nav-item h6 mb-0'>
                                 <a className='nav-link text-white' href={ResumePDF} target='_blank'><i className='bi bi-filetype-pdf'></i> Resume</a>
                             </li>
                         </ul>

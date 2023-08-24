@@ -55,7 +55,7 @@ const About = (props) => {
                 <div className='container px-5'>
                     <p className='display-5 py-2'>About Me</p>
                     <div className='row m-0 p-0'>
-                        <div className='col-xl-7 col-lg-6 col-md-12 col-sm-12 p-0'>
+                        <div className='col-xl-6 col-lg-6 col-md-12 col-sm-12 p-0'>
                             <p className='lead'>
                                 Passionate Full Stack Developer with <mark>five years of experience creating front-end and back-end websites</mark> to enhance companies' workflow and business decisions. Succeeded in implementing web solutions in several projects ranging from small to middle-sized companies, varying from manufacturer and retail.                         
                             </p>
@@ -66,41 +66,41 @@ const About = (props) => {
                                 <ul>
                                     <li className='list-item mb-0'>Programming Languages</li>
                                     {skillsProgramming.map(data => 
-                                        <span key={data.id} className='badge text-bg-success mx-1'>{data.name}</span>
+                                        <span key={data.id} className='badge text-dark mx-1' style={{backgroundColor:'#a9bcff'}}>{data.name}</span>
                                     )}
 
                                     <li className='list-item mb-0'>Frameworks</li>
                                     {skillsFramework.map(data => 
-                                        <span key={data.id} className='badge text-bg-danger mx-1'>{data.name}</span>
+                                        <span key={data.id} className='badge text-dark mx-1' style={{backgroundColor:'#9affff'}}>{data.name}</span>
                                     )}
 
                                     <li className='list-item mb-0'>Library</li>
                                     {skillsLibrary.map(data => 
-                                        <span key={data.id} className='badge text-bg-info mx-1'>{data.name}</span>
+                                        <span key={data.id} className='badge text-dark mx-1' style={{backgroundColor:'#18ffb1'}}>{data.name}</span>
                                     )}
 
                                     <li className='list-item mb-0'>Cloud Computing</li>
                                     {skillsCloudComputing.map(data => 
-                                        <span key={data.id} className='badge text-bg-primary mx-1'>{data.name}</span>
+                                        <span key={data.id} className='badge text-dark mx-1' style={{backgroundColor:'#ffffad'}}>{data.name}</span>
                                     )}
 
                                     <li className='list-item mb-0'>Databases</li>
                                     {skillsDatabase.map(data => 
-                                        <span key={data.id} className='badge text-bg-dark mx-1'>{data.name}</span>
+                                        <span key={data.id} className='badge text-dark mx-1' style={{backgroundColor:'#ffd493'}}>{data.name}</span>
                                     )}
 
                                     <li className='list-item mb-0'>Applications</li>
                                     {skillsApplication.map(data => 
-                                        <span key={data.id} className='badge text-bg-warning mx-1'>{data.name}</span>
+                                        <span key={data.id} className='badge text-dark mx-1' style={{backgroundColor:'#ff9f8c'}} >{data.name}</span>
                                     )}
 
                                     <li className='list-item mb-0'>Others</li>
                                     {skillsOthers.map(data => 
-                                        <span key={data.id} className='badge text-bg-secondary mx-1'>{data.name}</span>
+                                        <span key={data.id} className='badge text-dark mx-1' style={{backgroundColor:'#ffbdda'}} >{data.name}</span>
                                     )}
                                 </ul>
                             </div>
-                            <div className='col-xl-5 col-lg-6 col-md-12 col-sm-12 m-0 p-2x'>
+                            <div className='col-xl-6 col-lg-6 col-md-12 col-sm-12 p-0 mt-5'>
                                 <PieChart />
                             </div>
                         </div>

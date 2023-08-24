@@ -11,22 +11,22 @@ export const data = {
       label: 'numbers of skills',
       data: [5,4,6,2,4,5,5],
       backgroundColor: [
-        'green',
-        'red',
-        'cyan',
-        'blue',
-        'black',
-        'orange',
-        'grey'
+        '#a9bcff',
+        '#9affff',
+        '#18ffb1',
+        '#ffffad',
+        '#ffd493',
+        '#ff9f8c',
+        '#ffbdda'
       ],
       borderColor: [
-        'green',
-        'red',
-        'cyan',
-        'blue',
-        'black',
-        'orange',
-        'grey'
+        '#a9bcff',
+        '#9affff',
+        '#18ffb1',
+        '#ffffad',
+        '#ffd493',
+        '#ff9f8c',
+        '#ffbdda'
       ],
       borderWidth: 1,
     },
@@ -34,7 +34,7 @@ export const data = {
 };
 
 const PieChart = () => {
-  return <Pie className='' data={data} height={75} width={50} options={{ maintainAspectRatio: true }} />;
+  return <Pie data={data} width={300} height={300} options={{ maintainAspectRatio: true }} />;
 }
 
 export default PieChart;

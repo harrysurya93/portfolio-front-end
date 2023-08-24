@@ -9,19 +9,23 @@ import Work from '../components/WorkList/WorkList';
 import Credit from '../components/Credit/Credit';
 import ScrollSpy from "react-ui-scrollspy";
 import '../layout/MainBody.css';
+import Gallery from '../components/Gallery/Gallery';
+import SocialMedia from '../components/Social Media/SocialMedia';
 
 const MainBody = () =>{
 
     return (
         <Fragment>                        
             <NavBar />            
-                <main >
-                    <ScrollSpy scrollThrottle={100} >
+                <main>
+                    <SocialMedia/>
+                    <ScrollSpy scrollThrottle={100} useBoxMethod={false} >
                         <Introduction />
                         <About />
                         <Experience />
-                        <Education />                        
+                        <Education />
                         <Work />
+                        <Gallery />                   
                         <Contact />
                     </ScrollSpy>
                 </main>
