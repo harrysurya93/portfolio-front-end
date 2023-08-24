@@ -19,7 +19,8 @@ function App() {
 
   return (
     <Fragment>
-      {progressCount !== 100 ? <LoadingScreen progressCount={progressCount} /> : <MainBody />}
+      {/*progressCount !== 100 ? <LoadingScreen progressCount={progressCount} /> : <MainBody />*/}
+      <MainBody/>
     </Fragment>
   );
 }
