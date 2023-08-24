@@ -22,7 +22,7 @@ const MainBody = () =>{
         <Fragment>          
             <NavBar pointer={pointer} />            
             <SocialMedia/>
-                <main>
+                <main >
                     <Introduction handlePointerEvent={handlePointerEvent} />
                     <About  handlePointerEvent={handlePointerEvent}/>
                     <Experience  handlePointerEvent={handlePointerEvent}/>
