@@ -1,94 +1,25 @@
 import React, { useState, useEffect } from 'react';
+import './Contact.css';
+import { contentContact } from '../../database/Contents';
 
 const Contact = (props) =>{
 
-    const initialState = {
-        email: '',
-        comments: ''
-    }
-    const [submitting, setSubmitting] = useState(false);
-    const [isCorrectEmail, setCorrectEmail] = useState(false);
-    const [isCorrectComments, setCorrectComments] = useState(false);
-    const [firstInput, setfirstInput] = useState(true);
-    const [newForm, setNewForm] = useState(initialState);
-
-    const handleInputChange = (event) => {
-        setNewForm({
-              ...newForm,
-              [event.target.name]: event.target.value
-          })
-    }
-
-    useEffect(() => {
-        if(validateEmail(newForm.email)){
-            setCorrectEmail(true);
-        }else{
-            setCorrectEmail(false);
-        }
-
-        if(validateComments(newForm.comments)){
-            setCorrectComments(true);
-        }else{
-            setCorrectComments(false);
-        }
-    }, [newForm.email, newForm.comments])
-
-    const validateEmail = (email) => {
-        return String(email)
-          .toLowerCase()
-          .match(
-            /^(([^<>()[\]\\.,;:\s@']+(\.[^<>()[\]\\.,;:\s@']+)*)|.('.+'))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-          );
-      };
-    
-      const validateComments = (comments) => {
-        if(comments.length < 20){ return false; } else { return true; }
-      };
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        setfirstInput(false);
-        if(isCorrectEmail && isCorrectComments){
-            setSubmitting(true);
-        }
-    }
-
-    const handleFormCancel = () => {
-        setfirstInput(true);
-        setNewForm(initialState);
-    }
-
     return (
-            <section className='bg-light py-5' id='scrollSpyContact' onMouseEnter={() => props.handlePointerEvent(6)}>
-            <p className='display-5 text-center'>Contact Me</p>
-                <form autoComplete='off' onSubmit={handleSubmit}>
-                    <div className='form-floating mx-4 mb-3 w-75 mx-auto'>
-                        {firstInput ? <input className='form-control' id='floatingInput' value={newForm.email} placeholder='name@example.com' onChange={handleInputChange} name='email' /> : <input type='email' className={`form-control ${isCorrectEmail ? 'is-valid' : 'is-invalid'}`} id='floatingInput' value={newForm.email} name='email' onChange={handleInputChange} placeholder='name@example.com' /> }
-                        <label htmlFor='floatingInput'>Email address (required)</label>
-                        {!firstInput &&
-                        <div className={`${isCorrectEmail ? 'valid-feedback' : 'invalid-feedback'}`}>
-                        {isCorrectEmail ? 'Looks good!' : 'Please input correct email format.'}
-                        </div>}                    
+            <section className='py-5' id='sectionContact' onMouseEnter={() => props.handlePointerEvent(6)} >
+                <div className='container px-xl-5 py-xl-3 p-sm-0'>
+                    <p className='display-5 text-center'>Contact Me</p>
+                    <blockquote className='blockquote fs-6'>
+                        <p>{contentContact.startMessage}</p>
+                        {contentContact.paragraphs.map(paragraph =>
+                            <p key={paragraph.id}>{paragraph.value}</p>    
+                        )}
+                        <p className='mb-0'>{contentContact.finalMessage}</p>
+                        <p>{contentContact.name}</p>
+                    </blockquote>
+                    <div className='text-center'>
+                        <a href={contentContact.src} className={`btn ${props.theme === 'dark' ? 'btn-light' : 'btn-dark'} btn-lg`} type='button'><i className={contentContact.button_icon}></i> {contentContact.button_text}</a>
                     </div>
-                    
-                    <div className='form-floating mx-4 mb-3 w-75 mx-auto'>
-                        {firstInput ? <textarea className='form-control' style={{height:150}} placeholder='Leave a comment here' id='floatingTextarea' onChange={handleInputChange} name='comments' value={newForm.comments} /> : <textarea style={{height:150}} className={`form-control ${isCorrectComments ? 'is-valid' : 'is-invalid'}`} placeholder='Leave a comment here' id='floatingTextarea' onChange={handleInputChange} name='comments' value={newForm.comments} /> }
-                        <label htmlFor='floatingTextarea'>Comments</label>
-                        {!firstInput &&
-                        <div className={`${isCorrectComments ? 'valid-feedback' : 'invalid-feedback'}`}>
-                        {isCorrectComments ? 'Looks good!' : 'Please input at least 20 characters.'}
-                        </div>}
-                    </div>
-
-                            <div className='text-center'>
-                    {submitting ? <button className="btn btn-success btn-lg" type="button" disabled>
-                            <span className="spinner-border spinner-border-sm" aria-hidden="true"></span>
-                            <span role="status"> Loading...</span>
-                            </button>   : <input type='submit' className='btn btn-success btn-lg'/> 
-                        }
-                            </div>
-                                
-                </form>
+                </div>
             </section>
     )
 }

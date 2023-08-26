@@ -1,40 +1,34 @@
 import React from 'react';
-import BinusLogo from '../../assets/images/LogoBinus.png';
-import MikroskilLogo from '../../assets/images/LogoMikroskil.jpg';
+import Educations from '../../database/Educations';
+import './Education.css';
 
 const Education = (props) => {
 
     return (
-        <section className='bg-secondary-subtle py-5' id='scrollSpyEducation' onMouseEnter={() => props.handlePointerEvent(3)}>
-            <div className='container mx-auto'>
-            <p className='display-5 text-center'>Education</p>
-            <div className='card-group text-center'>
-                <div className='col-xl-2 col-lg-1 col-md-0 col-sm-0 col-xs-0'></div>
-                <div className='col-xl-4 col-lg-5 col-md-6 col-sm-6 col-xs-12'>
-                    <div className='card card-body h-100'>
-                        <a href='https://binus.ac.id' target='_blank' >
-                        <img src={BinusLogo} className='card-img-top py-5 px-5' width={200} height={200} alt='Binus Logo' />
-                        </a>
-                        <p className='h5'><i className='bi bi-book'></i> Computer Science</p>
-                        <p className='h5'><i className='bi bi-mortarboard-fill'></i> Master's Degree</p>
-                        <p className='h5'><i className='bi bi-trophy-fill'></i> GPA 3.90</p>
-                        <p className='h5'><i className='bi bi-calendar4-week'></i> 2020-2022</p>
-                        <p className='h5'><i className='bi bi-paperclip'></i> <a target='_blank' className='link-primary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover' href='http://www.jatit.org/volumes/Vol100No9/33Vol100No9.pdf'>Publication</a></p>
-                    </div>
+        <section className='py-5' id='sectionEducation' onMouseEnter={() => props.handlePointerEvent(3)}>
+           <div className='container px-xl-5 py-xl-3 p-sm-0'>
+                <p className='display-6 text-center'>Education</p>
+                <div className='row mx-xl-5'>
+                    {Educations.map( education =>                    
+                        <div key={education.id} className='col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 mx-auto p-0 my-2'>
+                            <div className='card card-body h-100 p-0 mx-5 mx-xl-5' >
+                                <a href={education.href} target='_blank' >
+                                    <img src={education.src} className='card-img-top img-responsive bg-white' width={250} height={250} alt={education.alt} />
+                                </a>
+                                <div className='p-3'>
+                                    <p className='mb-0'><i className='bi bi-book-fill'></i> {education.major}</p>
+                                    <p className='mb-0'><i className='bi bi-mortarboard-fill'></i> {education.degree}</p>
+                                    <p className='mb-0'><i className='bi bi-trophy-fill'></i> GPA {education.gpa} / 4.00</p>
+                                    <p className='mb-0'><i className='bi bi-calendar4-week'></i> {education.startYear} - {education.endYear}</p>
+                                    {education.publications.map(publication =>
+                                        <p key={publication.id} className='mb-0'><i className='bi bi-paperclip'></i> <a target='_blank' className='link-primary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover' href={publication.href}>Publication</a></p>                                    
+                                    )}
+                                </div>
+                            </div>
+                        </div>
+                    
+                    )}
                 </div>
-                <div className='col-xl-4 col-lg-5 col-md-6 col-sm-6 col-xs-12'>
-                    <div className='card card-body h-100'>
-                        <a href='https://mikroskil.ac.id' target='_blank'>
-                            <img  src={MikroskilLogo} className='card-img-top px-4' width={200} height={200} alt='Mikroskil Logo' />
-                        </a>
-                        <p className='h5'><i className='bi bi-book'></i> Computer Engineering</p>
-                        <p className='h5'><i className='bi bi-mortarboard-fill'></i> Bachelor's Degree</p>
-                        <p className='h5'><i className='bi bi-trophy-fill'></i> GPA 3.03</p>
-                        <p className='h5'><i className='bi bi-calendar4-week'></i> 2012-2018</p>
-                    </div>
-                </div>
-                <div className='col-xl-2 col-lg-2 col-md-0 col-sm-0 col-xs-0'></div>
-            </div>
             </div>
         </section>
     )

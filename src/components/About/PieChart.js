@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
-import { Pie } from 'react-chartjs-2';
+import { Chart, Pie } from 'react-chartjs-2';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 export const data = {
+
   labels: ['Programming Languages', 'Frameworks', 'Library', 'Cloud Computing', 'Databases', 'Applications','Others'],
+
   datasets: [
     {
       label: 'numbers of skills',
@@ -28,13 +30,16 @@ export const data = {
         '#ff9f8c',
         '#ffbdda'
       ],
-      borderWidth: 1,
+      borderWidth: 1
     },
   ],
 };
 
-const PieChart = () => {
-  return <Pie data={data} width={300} height={300} options={{ maintainAspectRatio: true }} />;
+const PieChart = (props) => {
+
+  const legendColor = props.theme === 'dark' ? '#F8F9FA' : '#212529';
+
+  return <Pie data={data} width={300} height={300} options={{legend:true, color:legendColor, maintainAspectRatio:true, responsive:true}} />;
 }
 
 export default PieChart;
