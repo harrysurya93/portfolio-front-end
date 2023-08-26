@@ -17,17 +17,19 @@ const NavBar = (props) => {
     }
 
     useEffect(()=> {
-        if(localStorage.getItem('theme') === 'dark'){
+        if(props.theme === 'dark'){
             checkTheme.current.checked = true;
         }
         else{
             checkTheme.current.checked = false;
         }
-    },[])
+    },[props.theme])
 
     const handleClick = () => {
         btnClose.current.click();
     }
+
+    console.log(props.theme);
 
     return(
         <nav className={`py-1 navbar navbar-expand-md sticky-top ${props.theme ==='dark' ? 'bg-dark' : 'bg-light'}`} id='navbarPortfolio' style={{opacity:0.95, backdropFilter:'blur(6px)'}}>
