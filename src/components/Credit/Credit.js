@@ -10,7 +10,7 @@ const Credit = () => {
                 <p className='text-lead text-white text-center lh-lg'>Developed and designed by Harry Surya using <mark>React</mark>, <mark>Bootstrap</mark>, and <mark>AWS Amplify</mark>.</p>
                 <h3 className='text-center'>
                     {SocialLinks.map(socialLink => 
-                        <a key={socialLink.id} className='text-white mx-1' href={socialLink.href} target='_blank'><i className={socialLink.icon}></i></a>
+                        <a key={socialLink.id} href={socialLink.href} className='text-white mx-1' target='_blank'><i className={socialLink.icon}></i></a>
                     )}
                 </h3>
             </div>
