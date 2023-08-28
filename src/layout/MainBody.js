@@ -10,17 +10,13 @@ import Credit from '../components/Credit/Credit';
 import '../layout/MainBody.css';
 import Gallery from '../components/Gallery/Gallery';
 import SocialMedia from '../components/SocialMedia/SocialMedia';
+import ScrollSpy from 'react-ui-scrollspy';
+import Menus from '../database/Menus';
 
 const MainBody = (props) =>{
 
     const [theme, setTheme] = useState();
-    const [pointer, setPointer] = useState(0);
 
-    const handlePointerEvent = (index) => {
-        setPointer(index);
-    }
-
-    //intialize
     useEffect(() => {
         if(!localStorage.getItem('theme')){
             localStorage.setItem('theme','dark');
@@ -34,26 +30,34 @@ const MainBody = (props) =>{
 
     }, [theme])
     
+    const handleScrollSpy = (id) => {
+        Menus.forEach(menu => {
+            if(id === menu.section){
+                const targetButton = document.getElementById(id + "Button");
+                targetButton.classList.add("active");
+            }
+            else
+            {
+                const otherButton = document.getElementById(menu.section + "Button");
+                otherButton.classList.remove("active");
+            }
+        });        
+    }
+
     return (
         <Fragment>
-            <NavBar theme={theme} setTheme={setTheme} />      
+            <NavBar theme={theme} setTheme={setTheme} />
             <SocialMedia theme={theme}/>
-                <main>
-                    <div className='container'>
-                        <Introduction theme={theme} handlePointerEvent={handlePointerEvent} />
-                        <hr/>
-                        <About theme={theme} handlePointerEvent={handlePointerEvent}/>
-                        <hr/>
-                        <Experience theme={theme} handlePointerEvent={handlePointerEvent}/>
-                        <hr/>
-                        <Education handlePointerEvent={handlePointerEvent}/>
-                        <hr/>
-                        <Work theme={theme} handlePointerEvent={handlePointerEvent}/>
-                        <hr/>
-                        <Gallery handlePointerEvent={handlePointerEvent}/>                   
-                        <hr/>
-                        <Contact theme={theme} handlePointerEvent={handlePointerEvent}/>
-                    </div>
+                <main className='container'>
+                    <ScrollSpy scrollThrottle={50} onUpdateCallback={handleScrollSpy} useBoxMethod={false}>
+                        <Introduction theme={theme} />
+                        <About theme={theme} />
+                        <Experience theme={theme} />
+                        <Education />                                                
+                        <Work theme={theme} />
+                        <Gallery />                   
+                        <Contact theme={theme} />
+                    </ScrollSpy>
                 </main>
             <Credit />
         </Fragment>

@@ -5,7 +5,7 @@ import Experiences from '../../database/Experiences';
 const Experience = (props) => {
 
     return (
-        <section className='py-5' id='sectionExperience' onMouseEnter={() => props.handlePointerEvent(2)} >
+        <section className='py-5 border-bottom' id='sectionExperience'>
             <div className='container px-xl-5 py-xl-3 p-sm-0'>
                 <p className='text-center display-6'>Work Experience</p>                
                 <div className={`accordion accordion-flush border-top ${props.theme === 'dark' ? 'bg-dark' : 'bg-light'}`} id='accordionPanelsStayOpenExample'>

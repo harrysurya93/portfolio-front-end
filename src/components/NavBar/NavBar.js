@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from 'react';
-import ResumePDF from '../../assets/documents/Resume.pdf';
 import Menus from '../../database/Menus';
 import './NavBar.css';
 
@@ -29,10 +28,8 @@ const NavBar = (props) => {
         btnClose.current.click();
     }
 
-    console.log(props.theme);
-
     return(
-        <nav className={`py-1 navbar navbar-expand-md sticky-top ${props.theme ==='dark' ? 'bg-dark' : 'bg-light'}`} id='navbarPortfolio' style={{opacity:0.95, backdropFilter:'blur(6px)'}}>
+        <nav className={`py-1 navbar navbar-expand-md fixed-top ${props.theme ==='dark' ? 'bg-dark' : 'bg-light'}`} id='navbarPortfolio' style={{minHeight:'8vh', opacity:0.95, backdropFilter:'blur(6px)'}}>
             <div className='container-fluid'>
                 <button className='navbar-toggler ms-auto border-0 btn' type='button' data-bs-toggle='offcanvas' data-bs-target='#offcanvasNavbar' aria-controls='offcanvasNavbar' aria-label='Toggle navigation'>
                     <i className='bi bi-filter-right display-4'></i>
@@ -45,7 +42,7 @@ const NavBar = (props) => {
                     <ul className='nav navbar-nav nav-pills justify-content-start flex-grow-1 column-gap-0 row-gap-3 my-1'>
                         {Menus.map(menu =>                             
                             <li key={menu.id} className='nav-item'>
-                                <a className={`btn btn-sm ${props.theme === 'dark' ? 'btn-outline-light' : 'btn-outline-dark'} w-100 border-0 py-2 fs-7`} onClick={handleClick} href={menu.section} target={menu.target}><i className={menu.icon}></i> {menu.name}</a>
+                                <a id={`${menu.section}Button`} className={`btn btn-sm ${props.theme === 'dark' ? 'btn-outline-light' : 'btn-outline-dark'} w-100 border-0 py-2 fs-7`} onClick={handleClick} href={`#${menu.section}`} data-to-scrollspy-id={menu.section} target={menu.target}><i className={menu.icon}></i> {menu.name}</a>
                             </li>
                         )}                        
                     </ul>
@@ -53,7 +50,7 @@ const NavBar = (props) => {
                         <li className='nav-item h6 m-auto'>
                             <div className='form-check form-switch my-auto'>
                                 <input ref={checkTheme} className='form-check-input border border-dark-subtle' onChange={handleThemeChange} type='checkbox' role='switch' id='flexSwitchCheckDefault' />
-                                <label ><span className='d-none d-md-block d-lg-block d-xl-block'>{props.theme === 'dark' ? <i className='bi bi-moon-stars-fill'></i> : <i className='bi bi-moon-fill text-dark'></i> }</span><span className='d-block d-md-none'>Dark Mode</span></label>
+                                <label><span className='d-none d-md-block d-lg-block d-xl-block'>{props.theme === 'dark' ? <i className='bi bi-moon-stars-fill'></i> : <i className='bi bi-moon-fill text-dark'></i> }</span><span className='d-block d-md-none'>Dark Mode</span></label>
                             </div>
                         </li> 
                     </ul>

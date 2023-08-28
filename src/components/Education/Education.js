@@ -5,7 +5,7 @@ import './Education.css';
 const Education = (props) => {
 
     return (
-        <section className='py-5' id='sectionEducation' onMouseEnter={() => props.handlePointerEvent(3)}>
+        <section className='py-5 border-bottom' id='sectionEducation' >
            <div className='container px-xl-5 py-xl-3 p-sm-0'>
                 <p className='display-6 text-center'>Education</p>
                 <div className='row mx-xl-5'>

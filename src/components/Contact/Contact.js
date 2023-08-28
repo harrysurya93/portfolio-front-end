@@ -5,7 +5,7 @@ import { contentContact } from '../../database/Contents';
 const Contact = (props) =>{
 
     return (
-            <section className='py-5' id='sectionContact' onMouseEnter={() => props.handlePointerEvent(6)} >
+            <section className='py-5' id='sectionContact' >
                 <div className='container px-xl-5 py-xl-3 p-sm-0'>
                     <p className='display-5 text-center'>Contact Me</p>
                     <blockquote className='blockquote fs-6'>

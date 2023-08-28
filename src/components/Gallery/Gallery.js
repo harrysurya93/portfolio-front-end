@@ -5,7 +5,7 @@ import Galleries from '../../database/Galleries';
 const Gallery = (props) => {
 
     return(
-        <section className='py-5' id='sectionGallery' onMouseEnter={() => props.handlePointerEvent(5)}>
+        <section className='py-5 border-bottom' id='sectionGallery'>
             <div className='container px-xl-5 py-xl-3 p-sm-0'>
             <p className='display-5 text-center'>Gallery</p>
             <div className='row mx-1'>

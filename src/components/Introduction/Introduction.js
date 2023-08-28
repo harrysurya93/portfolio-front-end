@@ -1,27 +1,29 @@
-import React, { useEffect, useState, useRef} from 'react';
+import React from 'react';
 import Avatars from '../../database/Avatars';
 import { contentIntroduction } from '../../database/Contents';
 
 const Introduction = (props) =>{
 
     return ( 
-        <section className='container' id='sectionIntroduction' onMouseEnter={() => props.handlePointerEvent(0)} style={{minHeight:'100vh'}}>
-            <div className='row align-items-center text-center py-3' style={{minHeight:'100vh'}}>
-                <div className='col-xl-8 col-lg-8 col-md-12 col-sm-12'>
-                    <h5 className='font-monospace display-8'>{contentIntroduction.welcomeMessage}</h5>
-                    <h1 className='font-monospace display-3'>{contentIntroduction.name}</h1>
-                    <h3 className='font-monospace fw-bold'>{contentIntroduction.role}</h3>
-                    <p className='font-monospace display-8 fst-italic mb-0'>{contentIntroduction.short_desc}</p>
-                    <p className='font-monospace display-8 fst-italic mb-0'><i className='bi bi-geo-alt-fill'></i> Based in <a className='link-primary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover' target='_blank' href={contentIntroduction.location_link}>{contentIntroduction.location_name}.</a></p> 
-                    <a className={`btn ${props.theme === 'dark' ? 'btn-light' : 'btn-dark'} d-none d-sm-block rounded-pill btn-lg mt-5 w-50 mx-auto`} href='#sectionAbout'>About Me</a>
-                </div>
-                <div className='col-xl-4 col-lg-4 col-md-12 col-sm-12 text-center'>
-                    {Avatars.map(avatar =>
-                        <img key={avatar.id}  className='img-thumbnail rounded-pill m-1' width={150} height={150} src={avatar.src} />
-                    )}                                   
-                    <a className={`btn ${props.theme === 'dark' ? 'btn-light' : 'btn-dark'} d-block d-sm-none rounded-pill btn-lg mt-5 w-50 mx-auto`} href={contentIntroduction.button_href}>{contentIntroduction.button_text}</a>
-                </div>
-            </div>                    
+        <section className='py-5 border-bottom min-vh-100' id='sectionIntroduction'>
+            <div className='container'>
+                <div className='row my-0 my-xl-5'>
+                    <div className='col-xl-8 col-lg-8 col-md-12 col-sm-12 my-xl-5 my-1'>
+                        <h5 className='font-monospace display-8 text-sm-start text-center'>{contentIntroduction.welcomeMessage}</h5>
+                        <h1 className='font-monospace display-3 text-sm-start text-center'>{contentIntroduction.name}</h1>
+                        <h3 className='font-monospace fw-bold text-sm-start text-center'>{contentIntroduction.role}</h3>
+                        <p className='font-monospace display-8 fst-italic mb-2 text-sm-start text-center'>{contentIntroduction.short_desc}</p>
+                        <p className='font-monospace display-8 fst-italic text-sm-start text-center'><i className='bi bi-geo-alt-fill'></i> Based in <a className='link-primary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover' target='_blank' href={contentIntroduction.location_link}>{contentIntroduction.location_name}</a></p> 
+                        <a className={`btn ${props.theme === 'dark' ? 'btn-light' : 'btn-dark'} d-none d-sm-block rounded-pill btn-lg w-50 mt-3`} href={contentIntroduction.button_href}>{contentIntroduction.button_text}</a>
+                    </div>
+                    <div className='col-xl-4 col-lg-4 col-md-12 col-sm-12 text-center my-xl-5 my-1'>
+                        {Avatars.map(avatar =>
+                            <img key={avatar.id}  className='img-thumbnail rounded-pill m-1' width={150} height={150} src={avatar.src} />
+                        )}                                   
+                        <a className={`btn ${props.theme === 'dark' ? 'btn-light' : 'btn-dark'} d-block d-sm-none rounded-pill btn-lg mt-3 w-50 mx-auto`} href={contentIntroduction.button_href}>{contentIntroduction.button_text}</a>
+                    </div>
+                </div> 
+            </div>                   
         </section>
     )
 }

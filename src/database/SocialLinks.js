@@ -1,6 +1,7 @@
 import { v4 as uuidv4 } from 'uuid';
 import SocialLink from '../models/SocialLink';
 
+
 const SocialLink1 = new SocialLink(uuidv4(),'https://www.linkedin.com/in/harry-surya/', 'bi bi-linkedin');
 const SocialLink2 = new SocialLink(uuidv4(),'https://github.com/harrysurya93', 'bi bi-github');
 const SocialLink3 = new SocialLink(uuidv4(),'https://www.instagram.com/harrysurya93/', 'bi bi-instagram');

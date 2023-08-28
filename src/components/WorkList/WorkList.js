@@ -18,7 +18,7 @@ const Work = (props) => {
     }
 
     return (
-        <section className='py-5' id='sectionWork' onMouseEnter={() => props.handlePointerEvent(4)}>
+        <section className='py-5 border-bottom' id='sectionWork' >
             <div className='container'>
                 <p className='display-5 text-center'>Work Experience</p>
                 <div className='row m-0 p-0'>

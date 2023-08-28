@@ -7,7 +7,7 @@ import Skills from '../../database/Skills';
 const About = (props) => {
 
     return (
-        <section className='py-5' id='sectionAbout' onMouseEnter={() => props.handlePointerEvent(1)}> 
+        <section className='py-5 border-bottom' id='sectionAbout'> 
             <div className='container px-xl-5 py-xl-3 p-sm-0'>
                 <p className='display-6 text-center'>{contentAbout.title}</p>
                 <div className='row m-0 p-0'>
