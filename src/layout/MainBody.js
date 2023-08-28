@@ -5,7 +5,7 @@ import About from '../components/About/About';
 import Experience from '../components/Experience/Experience';
 import Education from '../components/Education/Education';
 import Contact from '../components/Contact/Contact';
-import Work from '../components/WorkList/WorkList';
+import Project from '../components/Project/Project';
 import Credit from '../components/Credit/Credit';
 import '../layout/MainBody.css';
 import Gallery from '../components/Gallery/Gallery';
@@ -15,6 +15,7 @@ import Menus from '../database/Menus';
 
 const MainBody = (props) =>{
 
+    const [activeSection, setActiveSection] = useState();
     const [theme, setTheme] = useState();
 
     useEffect(() => {
@@ -31,30 +32,20 @@ const MainBody = (props) =>{
     }, [theme])
     
     const handleScrollSpy = (id) => {
-        Menus.forEach(menu => {
-            if(id === menu.section){
-                const targetButton = document.getElementById(id + "Button");
-                targetButton.classList.add("active");
-            }
-            else
-            {
-                const otherButton = document.getElementById(menu.section + "Button");
-                otherButton.classList.remove("active");
-            }
-        });        
+        setActiveSection(id);  
     }
 
     return (
         <Fragment>
-            <NavBar theme={theme} setTheme={setTheme} />
+            <NavBar activeSection={activeSection} theme={theme} setTheme={setTheme} />
             <SocialMedia theme={theme}/>
                 <main className='container'>
-                    <ScrollSpy scrollThrottle={50} onUpdateCallback={handleScrollSpy} useBoxMethod={false}>
+                    <ScrollSpy activeClass='active' scrollThrottle={50} onUpdateCallback={handleScrollSpy} useBoxMethod={false}>
                         <Introduction theme={theme} />
                         <About theme={theme} />
                         <Experience theme={theme} />
                         <Education />                                                
-                        <Work theme={theme} />
+                        <Project theme={theme} />
                         <Gallery />                   
                         <Contact theme={theme} />
                     </ScrollSpy>

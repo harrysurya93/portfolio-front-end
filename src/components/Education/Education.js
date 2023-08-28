@@ -13,7 +13,7 @@ const Education = (props) => {
                         <div key={education.id} className='col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 mx-auto p-0 my-2'>
                             <div className='card card-body h-100 p-0 mx-5 mx-xl-5' >
                                 <a href={education.href} target='_blank' >
-                                    <img src={education.src} className='card-img-top img-responsive bg-white' width={250} height={250} alt={education.alt} />
+                                    <img src={education.src} className='card-img-top img-responsive bg-white border-bottom' width={250} height={250} alt={education.alt} />
                                 </a>
                                 <div className='p-3'>
                                     <p className='mb-0'><i className='bi bi-book-fill'></i> {education.major}</p>

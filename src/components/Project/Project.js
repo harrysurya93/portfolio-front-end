@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './WorkList.css';
+import './Project.css';
 import Projects from '../../database/Projects';
 
 const Work = (props) => {
@@ -18,9 +18,9 @@ const Work = (props) => {
     }
 
     return (
-        <section className='py-5 border-bottom' id='sectionWork' >
+        <section className='py-5 border-bottom' id='sectionWork'>
             <div className='container'>
-                <p className='display-5 text-center'>Work Experience</p>
+                <p className='display-5 text-center'>Project</p>
                 <div className='row m-0 p-0'>
                     {Projects.slice(0,totalItemShowing).map(project => 
                         <div key={project.id} className='col-xs-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 p-1'>

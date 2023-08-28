@@ -1,4 +1,4 @@
-Portfolio website for Full-Stack Developer created by Harry Surya.
+Website that displays personal information to showcase skills and experiences for career development and personal branding.
 
 # Library List
 
