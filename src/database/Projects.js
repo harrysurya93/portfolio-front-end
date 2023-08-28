@@ -23,7 +23,7 @@ Project2.addTech(uuidv4(),'axios.js');
 Project2.addTech(uuidv4(),'datatables.js');
 Project2.addTech(uuidv4(),'AWS EC2');
 
-const Project3 = new Project(uuidv4(),'Polychemie Asia Pacific Permai','CRM','Web application to manage sales tasks such as activity recording, complaint management, sales forecasting, and reporting.');
+const Project3 = new Project(uuidv4(),'Polychemie Asia Pacific Permai','Customer Relationship Management (CRM)','Web application to manage sales tasks such as activity recording, complaint management, sales forecasting, and reporting.');
 Project3.addTech(uuidv4(),'C#');
 Project3.addTech(uuidv4(),'ASP.NET MVC');
 Project3.addTech(uuidv4(),'JavaScript');
@@ -37,7 +37,7 @@ Project3.addTech(uuidv4(),'datatables.js');
 Project3.addTech(uuidv4(),'autoComplete.js');
 Project3.addTech(uuidv4(),'AWS EC2');
 
-const Project4 = new Project(uuidv4(),'Polychemie Asia Pacific Permai','WMS','Web application to handle inventory movement based on item master data, bin location, and warehouse using QR Code scanning.');
+const Project4 = new Project(uuidv4(),'Polychemie Asia Pacific Permai','Warehouse Management System (WMS)','Web application to handle inventory movement based on item master data, bin location, and warehouse using QR Code scanning.');
 Project4.addTech(uuidv4(),'Visual Basic');
 Project4.addTech(uuidv4(),'ASP.NET');
 Project4.addTech(uuidv4(),'JavaScript');
@@ -71,7 +71,7 @@ Project6.addTech(uuidv4(),'DI API');
 Project6.addTech(uuidv4(),'axios.js');
 Project6.addTech(uuidv4(),'AWS EC2');
 
-const Project7 = new Project(uuidv4(),'Planet Toys','Point of Sale','Web application for retail department that handles daily transaction, inventory movement, and invoicing');
+const Project7 = new Project(uuidv4(),'Planet Toys','Point of Sale (POS)','Web application for retail department that handles daily transaction, inventory movement, and invoicing');
 Project7.addTech(uuidv4(),'C#');
 Project7.addTech(uuidv4(),'ASP.NET MVC');
 Project7.addTech(uuidv4(),'JavaScript');

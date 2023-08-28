@@ -1,7 +1,7 @@
 import { v4 as uuidv4 } from 'uuid';
 import Skill from '../models/Skill';
 
-const Skill1 = new Skill(uuidv4(),'Programming Language','#a9bcff');
+const Skill1 = new Skill(uuidv4(),'Programming Languages','#a9bcff');
 Skill1.addDetail(uuidv4(),'C#');
 Skill1.addDetail(uuidv4(),'JavaScript (ES6+)');
 Skill1.addDetail(uuidv4(),'HTML');

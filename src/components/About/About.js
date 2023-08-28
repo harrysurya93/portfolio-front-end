@@ -25,7 +25,7 @@ const About = (props) => {
                             )}
                         </div>
                         <div className='col-xl-6 col-lg-6 col-md-12 col-sm-12 p-0 mt-5'>
-                            <PieChart theme={props.theme} />
+                            <PieChart Skills={Skills} theme={props.theme} />
                         </div>
                     </div>
                 </div>                

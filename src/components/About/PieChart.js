@@ -1,12 +1,12 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
-import { Chart, Pie } from 'react-chartjs-2';
+import { Pie } from 'react-chartjs-2';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 export const data = {
 
-  labels: ['Programming Languages', 'Frameworks', 'Library', 'Cloud Computing', 'Databases', 'Applications','Others'],
+  labels: ['Programming Languages', 'Frameworks', 'Libraries', 'Cloud Computing', 'Databases', 'Applications','Others'],
 
   datasets: [
     {
