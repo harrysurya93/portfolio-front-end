@@ -1,5 +1,5 @@
 import { v4 as uuidv4 } from 'uuid';
-import { ContentAbout, ContentIntroduction, ContentContact } from '../models/Content';
+import { ContentAbout, ContentIntroduction, ContentContact, ContentNavBar } from '../models/Content';
 
 const contentAbout = new ContentAbout('About Me');
 contentAbout.addParagraph(uuidv4(),<>Passionate Full Stack Developer with <mark>five years of experience creating front-end and back-end</mark> websites to enhance companies\' workflow and business decisions. Succeeded in implementing web solutions in several projects ranging from small to middle-sized companies, varying from manufacturer and retail.</> )
