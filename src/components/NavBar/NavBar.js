@@ -29,7 +29,7 @@ const NavBar = (props) => {
     }
 
     return(
-        <nav className={`py-1 navbar navbar-expand-md fixed-top ${props.theme ==='dark' ? 'bg-dark' : 'bg-light'}`} id='navbarPortfolio' style={{minHeight:'8vh', opacity:0.95, backdropFilter:'blur(6px)'}}>
+        <nav className={`py-1 navbar navbar-expand-md sticky-top ${props.theme ==='dark' ? 'bg-dark' : 'bg-light'}`} id='navbarPortfolio' style={{minHeight:'8vh', opacity:0.95, backdropFilter:'blur(6px)'}}>
             <div className='container-fluid'>
                 <button className='navbar-toggler ms-auto border-0 btn' type='button' data-bs-toggle='offcanvas' data-bs-target='#offcanvasNavbar' aria-controls='offcanvasNavbar' aria-label='Toggle navigation'>
                     <i className='bi bi-filter-right display-4'></i>
