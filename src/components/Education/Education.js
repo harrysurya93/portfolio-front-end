@@ -18,7 +18,7 @@ const Education = (props) => {
                                 <div className='p-3'>
                                     <p className='mb-0'><i className='bi bi-book-fill'></i> {education.major}</p>
                                     <p className='mb-0'><i className='bi bi-mortarboard-fill'></i> {education.degree}</p>
-                                    <p className='mb-0'><i className='bi bi-trophy-fill'></i> GPA {education.gpa} / 4.00</p>
+                                    <p className='mb-0'><i className='bi bi-trophy-fill'></i> GPA {education.gpa.toFixed(2)} / 4.00</p>
                                     <p className='mb-0'><i className='bi bi-calendar4-week'></i> {education.startYear} - {education.endYear}</p>
                                     {education.publications.map(publication =>
                                         <p key={publication.id} className='mb-0'><i className='bi bi-paperclip'></i> <a target='_blank' className='link-primary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover' href={publication.href}>Publication</a></p>                                    

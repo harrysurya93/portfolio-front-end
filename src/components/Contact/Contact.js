@@ -13,7 +13,8 @@ const Contact = (props) =>{
                         {contentContact.paragraphs.map(paragraph =>
                             <p key={paragraph.id}>{paragraph.value}</p>    
                         )}
-                        <p className='mb-1'>{contentContact.finalMessage}</p>
+                        <br/>
+                        <p className='mb-0'>{contentContact.finalMessage}</p>
                         <p>{contentContact.name}</p>
                     </blockquote>
                     <div className='text-center'>
