@@ -1,4 +1,4 @@
-import React, { Fragment, useState, useEffect } from 'react';
+import React, { Fragment, useEffect } from 'react';
 import Introduction from '../components/Introduction/Introduction';
 import NavBar from '../components/NavBar/NavBar';
 import About from '../components/About/About';
@@ -11,43 +11,30 @@ import '../layout/MainBody.css';
 import Gallery from '../components/Gallery/Gallery';
 import SocialMedia from '../components/SocialMedia/SocialMedia';
 import ScrollSpy from 'react-ui-scrollspy';
-import Menus from '../database/Menus';
+import { useSelector } from 'react-redux';
 
-const MainBody = (props) =>{
+const MainBody = () =>{
 
-    const [activeSection, setActiveSection] = useState();
-    const [theme, setTheme] = useState();
+    const theme = useSelector(state => state.theme);
 
     useEffect(() => {
-        if(!localStorage.getItem('theme')){
-            localStorage.setItem('theme','dark');
-            setTheme('dark');
-            document.documentElement.setAttribute('data-bs-theme','dark');
-        }
-        else {
-            setTheme(localStorage.getItem('theme'));
-            document.documentElement.setAttribute('data-bs-theme',localStorage.getItem('theme'));
-        }
-
+        localStorage.setItem('theme',theme);
+        document.documentElement.setAttribute('data-bs-theme',theme);
     }, [theme])
     
-    const handleScrollSpy = (id) => {
-        setActiveSection(id);  
-    }
-
     return (
         <Fragment>
-            <NavBar activeSection={activeSection} theme={theme} setTheme={setTheme} />
-            <SocialMedia theme={theme}/>
+            <NavBar />
+            <SocialMedia/>
                 <main className='container'>
-                    <ScrollSpy activeClass='active' scrollThrottle={50} onUpdateCallback={handleScrollSpy} useBoxMethod={false}>
-                        <Introduction theme={theme} />
-                        <About theme={theme} />
-                        <Experience theme={theme} />
+                    <ScrollSpy activeClass='active' scrollThrottle={50} useBoxMethod={false}>
+                        <Introduction />
+                        <About />
+                        <Experience />
                         <Education />                                                
-                        <Project theme={theme} />
+                        <Project />
                         <Gallery />                   
-                        <Contact theme={theme} />
+                        <Contact />
                     </ScrollSpy>
                 </main>
             <Credit />

@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import './Project.css';
 import Projects from '../../database/Projects';
+import { useSelector } from 'react-redux';
 
-const Work = (props) => {
+const Work = () => {
+
+    const theme = useSelector(state => state.theme);
 
     const [isShow, setShow] = useState(false);
     const [totalItemShowing, setTotalItemShowing] = useState(4);    
@@ -37,7 +40,7 @@ const Work = (props) => {
                         </div>
                     )}
                     <div className='my-1 text-center'>
-                        {isShow ? <button className={`btn ${props.theme === 'dark' ? 'btn-dark' : 'btn-light'} `} onClick={showLess}>Show Less <i className='bi bi-arrow-up'></i></button> : <button className={`btn ${props.theme === 'dark' ? 'btn-dark' : 'btn-light'}`} onClick={showMore}>Show More <i className='bi bi-arrow-down'></i></button> }
+                        {isShow ? <button className={`btn ${theme === 'dark' ? 'btn-dark' : 'btn-light'} `} onClick={showLess}>Show Less <i className='bi bi-arrow-up'></i></button> : <button className={`btn ${theme === 'dark' ? 'btn-dark' : 'btn-light'}`} onClick={showMore}>Show More <i className='bi bi-arrow-down'></i></button> }
                     </div>                                            
                 </div>
             </div>

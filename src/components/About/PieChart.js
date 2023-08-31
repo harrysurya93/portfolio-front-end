@@ -1,6 +1,7 @@
 import React from 'react';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Pie } from 'react-chartjs-2';
+import { useSelector } from 'react-redux';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
@@ -37,7 +38,8 @@ export const data = {
 
 const PieChart = (props) => {
 
-  const legendColor = props.theme === 'dark' ? '#F8F9FA' : '#212529';
+  const theme = useSelector(state => state.theme);
+  const legendColor = theme === 'dark' ? '#F8F9FA' : '#212529';
 
   return <Pie data={data} width={300} height={300} options={{legend:true, color:legendColor, maintainAspectRatio:true, responsive:true}} />;
 }

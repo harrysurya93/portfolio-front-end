@@ -1,8 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './Contact.css';
 import { contentContact } from '../../database/Contents';
+import { useSelector } from 'react-redux';
 
-const Contact = (props) =>{
+const Contact = () =>{
+
+    const theme = useSelector(state => state.theme);
 
     return (
             <section className='py-5' id='sectionContact' >
@@ -18,7 +21,7 @@ const Contact = (props) =>{
                         <p>{contentContact.name}</p>
                     </blockquote>
                     <div className='text-center'>
-                        <a href={contentContact.src} className={`btn ${props.theme === 'dark' ? 'btn-light' : 'btn-dark'} btn-lg`} type='button'><i className={contentContact.button_icon}></i> {contentContact.button_text}</a>
+                        <a href={contentContact.src} className={`btn ${theme === 'dark' ? 'btn-light' : 'btn-dark'} btn-lg`} type='button'><i className={contentContact.button_icon}></i> {contentContact.button_text}</a>
                     </div>
                 </div>
             </section>

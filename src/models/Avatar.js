@@ -1,7 +1,8 @@
 class Avatar {
-    constructor(id,src){
+    constructor(id,src, name){
         this.id = id;
         this.src = src;
+        this.name = name;
     }
 }
 
