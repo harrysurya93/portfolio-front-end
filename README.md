@@ -3,7 +3,8 @@ Website that displays personal information to showcase skills and experiences fo
 # Library List
 
 1. React (https://react.dev)
-2. Bootstrap 5.3.1 (https://getbootstrap.com)
+2. Redux (https://redux.js.org)
+3. Bootstrap 5.3.1 (https://getbootstrap.com)
 
 # Cloud Service
 
