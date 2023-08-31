@@ -3,6 +3,7 @@ import Project from '../models/Project';
 
 const Project1 = new Project(uuidv4(),'Personal','Portfolio','Website that displays personal information to showcase skills and experiences for career development and personal branding.');
 Project1.addTech(uuidv4(),'React');
+Project1.addTech(uuidv4(),'Redux');
 Project1.addTech(uuidv4(),'Bootstrap');
 Project1.addTech(uuidv4(),'JavaScript (ES6+)');
 Project1.addTech(uuidv4(),'HTML');
