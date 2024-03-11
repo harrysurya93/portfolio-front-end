@@ -20,6 +20,6 @@ Experience3.addResponsibility(uuidv4(),'Assist in inventory counts and stock rot
 Experience3.addResponsibility(uuidv4(),'Operate warehouse equipment, such as pallet jacks and forklifts, to safely move large orders or heavy items for the load and unload process.');
 
 const Experiences = [];
-Experiences.push(Experience1, Experience2, Experience3);
+Experiences.push(Experience3, Experience1, Experience2);
 
 export default Experiences;
