@@ -20,7 +20,7 @@ const Introduction = () =>{
                     </div>
                     <div className='col-xl-4 col-lg-4 col-md-12 col-sm-12 text-center my-xl-0 my-auto'>
                         {Avatars.map(avatar =>
-                            <img key={avatar.id}  className='img-thumbnail' width={250} height={100} src={avatar.src} alt={avatar.name} />
+                            <img key={avatar.id}  className='img-thumbnail border-secondary' width={300} height={300} src={avatar.src} alt={avatar.name} />
                         )}                                 
                         <a className={`btn ${theme === 'dark' ? 'btn-light' : 'btn-dark'} d-block d-lg-none rounded-pill btn-lg mt-3 w-50 mx-auto`} href={contentIntroduction.button_href}>{contentIntroduction.button_text}</a>
                     </div>
