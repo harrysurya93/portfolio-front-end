@@ -18,10 +18,10 @@ const Introduction = () =>{
                         <p className='font-monospace display-8 fst-italic text-sm-start text-center'><i className='bi bi-geo-alt-fill'></i> Based in <a className='link-primary link-offset-2 link-offset-3-hover link-underline link-underline-opacity-0 link-underline-opacity-75-hover' target='_blank' href={contentIntroduction.location_link} rel='noreferrer'>{contentIntroduction.location_name}</a></p> 
                         <a className={`btn ${theme === 'dark' ? 'btn-light' : 'btn-dark'} d-none d-lg-block rounded-pill btn-lg w-50 mt-3`} href={contentIntroduction.button_href}>{contentIntroduction.button_text}</a>
                     </div>
-                    <div className='col-xl-4 col-lg-4 col-md-12 col-sm-12 text-center my-xl-5 my-auto'>
+                    <div className='col-xl-4 col-lg-4 col-md-12 col-sm-12 text-center my-xl-0 my-auto'>
                         {Avatars.map(avatar =>
-                            <img key={avatar.id}  className='img-thumbnail rounded-pill m-2' width={150} height={150} src={avatar.src} alt={avatar.name} />
-                        )}                                   
+                            <img key={avatar.id}  className='img-thumbnail' width={250} height={100} src={avatar.src} alt={avatar.name} />
+                        )}                                 
                         <a className={`btn ${theme === 'dark' ? 'btn-light' : 'btn-dark'} d-block d-lg-none rounded-pill btn-lg mt-3 w-50 mx-auto`} href={contentIntroduction.button_href}>{contentIntroduction.button_text}</a>
                     </div>
                 </div> 
