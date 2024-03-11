@@ -6,7 +6,7 @@ import Avatar from '../models/Avatar';
 
 const tempAvatar1 = new Avatar(uuidv4(), Avatar1, 'avatar1');
 const tempAvatar2 = new Avatar(uuidv4(), Avatar2, 'avatar2');
-const tempAvatar3 = new Avatar(uuidv4(), Avatar3, 'avatar3');
+const tempAvatar3 = new Avatar(uuidv4(), Avatar3, 'Harry_Casual');
 
 const Avatars = [];
 Avatars.push(tempAvatar1, tempAvatar2, tempAvatar3);
