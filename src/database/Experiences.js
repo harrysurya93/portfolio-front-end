@@ -13,11 +13,11 @@ Experience2.addResponsibility(uuidv4(),'Worked with team members to implement we
 Experience2.addResponsibility(uuidv4(),'Designed database validations and approvals, ensuring alignment with client processes.');
 Experience2.addResponsibility(uuidv4(),'Presented the final product to key users to ensure the UAT and GO-LIVE phases can be achieved according to the project timeline.');
 
-const Experience3 = new Experience(uuidv4(), 'FreshPoint', 'https://www.freshpoint.com/', 'Order Selector', 'Nov 2023','Present');
-Experience3.addResponsibility(uuidv4(),'Accurately pick orders as per the picking list instructions, ensuring the correct variety, size, and quality of produce is selected.');
-Experience3.addResponsibility(uuidv4(),'Complete paperwork or electronic records related to order picking, inventory levels, and quality checks.');
-Experience3.addResponsibility(uuidv4(),'Assist in inventory counts and stock rotation to ensure freshness and reduce waste.');
-Experience3.addResponsibility(uuidv4(),'Operate warehouse equipment, such as pallet jacks and forklifts, to safely move large orders or heavy items for the load and unload process.');
+const Experience3 = new Experience(uuidv4(), 'FreshPoint', 'https://www.freshpoint.com/', 'Production Coordinator', 'Nov 2023','Present');
+Experience3.addResponsibility(uuidv4(),'Coordinate production runs with the production supervisor to ensure they are cost-effective and timely.');
+Experience3.addResponsibility(uuidv4(),'Develop and manage product labels using VB script to meet customer specifications.');
+Experience3.addResponsibility(uuidv4(),'Manage inventory of materials necessary for production, in collaboration with the production manager and purchasing department.');
+Experience3.addResponsibility(uuidv4(),'Maintain and update reports on work progress and material consumption using advanced Excel formulas and scripting.');
 
 const Experiences = [];
 Experiences.push(Experience3, Experience1, Experience2);
