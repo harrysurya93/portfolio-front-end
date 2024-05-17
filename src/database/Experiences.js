@@ -14,8 +14,8 @@ Experience2.addResponsibility(uuidv4(),'Designed database validations and approv
 Experience2.addResponsibility(uuidv4(),'Presented the final product to key users to ensure the UAT and GO-LIVE phases can be achieved according to the project timeline.');
 
 const Experience3 = new Experience(uuidv4(), 'FreshPoint', 'https://www.freshpoint.com/', 'Production Coordinator', 'Nov 2023','Present');
-Experience3.addResponsibility(uuidv4(),'Coordinate production runs with the production supervisor to ensure they are cost-effective and timely.');
-Experience3.addResponsibility(uuidv4(),'Develop and manage product labels using VB script to meet customer specifications.');
+Experience3.addResponsibility(uuidv4(),'Coordinate production runs with the production supervisor to ensure the process are cost-effective and timely.');
+Experience3.addResponsibility(uuidv4(),'Develop and manage product labels using Visual Basic script to meet customer specifications.');
 Experience3.addResponsibility(uuidv4(),'Manage inventory of materials necessary for production, in collaboration with the production manager and purchasing department.');
 Experience3.addResponsibility(uuidv4(),'Maintain and update reports on work progress and material consumption using advanced Excel formulas and scripting.');
 
